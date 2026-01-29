@@ -1,0 +1,45 @@
+"""
+面向对象编程与面向过程编程的不同：
+面向过程：一步一步描述、执行。主要由函数和全局变量组成，数据与操作分离。容易代码重复。注重步骤与顺序。
+        求和：sum=add(numbers)
+面向对象：以对象（事件，事物，万物皆对象）为中心，由对象和操作方法组成，数据和数据的操作方法被封装在一起。
+        依赖类的继承、多态实现复用和扩展。定义一个类,再实例化对象：object=Caculator(),
+        调用类的操作方法：object.add(numbers)
+"""
+
+
+# 面向过程的编程示例：
+def area_caculator(length, width):
+    return length * width
+
+
+length = 20
+width = 30
+area = area_caculator(length, width)
+print(area)
+
+
+# 面向对象的编程示例：
+# 命名规则：class 类的名字首字母大写。定义一个名为Rectangle的类：矩形
+class Rectangle:
+
+    # 构造方法（初始化方法），创建对象时自动调用
+    # 定义类的构造函数__init__.当构造Rectangle的实际例子的时候会自动调用这个函数
+    # 该函数有俩参数需要被传入：长度length_1和宽度width_1.也就是该矩形Rectangle的属性。
+    def __init__(self, length_1, width_1):
+        # 将传进来的参数lenght_1，赋值给实例self.length属性，用来储存长度的
+        self.length = length_1
+        # 将传进来的参数width_1，赋值给实例的elf.width_1属性，用来储存宽度
+        self.width = width_1
+
+    # 创建一个计算矩形面积的方法：计算面积，参数是实例参数。实际是定义一个计算面积的方法。
+    def area_calculator(self):
+        # 返回得到的值：长 X 宽。通过传入的实例的参数属性，计算矩形面积。
+        return self.length * self.width
+
+
+# 给类Rectangle传参。创建一个Rectangle类的叫area_1的实际的例子：长50，宽70
+area_1 = Rectangle(50, 70)
+
+# 打印传参后的面积。打印实际例子的计算面积的结果。
+print(area_1.area_calculator())

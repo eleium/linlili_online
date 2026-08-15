@@ -22,7 +22,6 @@ print(area)
 # 面向对象的编程示例：
 # 命名规则：class 类的名字首字母大写。定义一个名为Rectangle的类：矩形
 class Rectangle:
-
     # 构造方法（初始化方法），创建对象时自动调用
     # 定义类的构造函数__init__.当构造Rectangle的实际例子的时候会自动调用这个函数
     # 该函数有俩参数需要被传入：长度length_1和宽度width_1.也就是该矩形Rectangle的属性。
